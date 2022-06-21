@@ -1,16 +1,10 @@
+{% extends 'basic.html' %}
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/static/css/style.css" rel="stylesheet">
-     
+{% block head %} 
 <title>Power Plant Calculator</title>
+{% endblock %}
 
-  </head>
-  <body style="background-color:powderblue">
-     
+{% block body %} 
 <h1>Power Plant Calculator</h1>
 <form action '/' method = 'POST'>
     <table>
@@ -30,10 +24,7 @@
     <button type='submit' value='submit'>&emsp;&emsp;Calculate&emsp;&emsp;</button><br><br>
     <hr>
 </form>
-
-<p>Power Plant energy output is [443.71462687] Mw</p>
-
-
-    <p style="color:red;text-align: center"> developed by Mudassir Shaik</p>
-  </body>
-</html>
+{% if eo%}
+<p>Power Plant energy output is {{ eo }} Mw</p>
+{% endif %}
+{% endblock %}
