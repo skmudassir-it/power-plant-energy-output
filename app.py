@@ -13,7 +13,7 @@ def home():
         Pressure = float(request.form.get('pressure'))
         Humidity = float(request.form.get('humidity'))
         m = [[Temperature,Vacuum,Pressure,Humidity]]
-        eo = round(solve.predict(m),2)
+        eo = solve.predict(m)
     return render_template('index.html',eo = eo)
 
 if __name__ == '__main__':
