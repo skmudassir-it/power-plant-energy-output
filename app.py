@@ -1,6 +1,6 @@
 from flask import Flask, redirect, render_template, request, url_for
 import joblib
-import numpy as np
+#import numpy as np
 app = Flask(__name__)
 solve = joblib.load('model')
 
